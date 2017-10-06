@@ -1,0 +1,52 @@
+{
+  "name": "tedxizmit-html",
+  "description": "TEDx İzmit Web Sitesi",
+  "version": "1.1.0",
+  "homepage": "https://gitlab.com/mavisland/tedxizmit-html",
+  "main": "gulpfile.js",
+  "author": {
+    "name": "Tanju Yıldız",
+    "email": "ben@tanjuyildiz.com",
+    "url": "tanjuyildiz.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "*",
+    "del": "*",
+    "es6-promise": "*",
+    "gulp": "*",
+    "gulp-archiver": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-csscomb": "*",
+    "gulp-data": "^1.2.1",
+    "gulp-header": "*",
+    "gulp-imagemin": "*",
+    "gulp-less": "*",
+    "gulp-notify": "*",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/mavisland/tedxizmit-html.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/mavisland/tedxizmit-html/issues"
+  },
+  "keywords": [
+    "psd to html",
+    "jquery",
+    "twitter bootstrap",
+    "font awesome",
+    "owl carousel",
+    "magnific popup",
+    "nunjucks",
+    "gulp"
+  ]
+}

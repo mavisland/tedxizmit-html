@@ -1,0 +1,21 @@
+# OS or IDE folders/files to ignore
+*~
+._*
+*.lock
+*.DS_Store
+*.swp
+*.out
+.cache
+.project
+.settings
+thumb.db
+Thumbs.db
+desktop.ini
+
+# Project specific files to ignore
+archive
+build
+node_modules
+public
+*.sublime-project
+*.sublime-workspace
