@@ -1,0 +1,47 @@
+// Padding mixins
+// -------------------------
+
+// Left-right padding
+.padding-lr(@left: 10px; @right: @left) {
+    padding-left: @left;
+    padding-right: @right;
+}
+// Top-bottom padding
+.padding-tb(@top: 10px; @bottom: @top) {
+    padding-bottom: @bottom;
+    padding-top: @top;
+}
+
+
+// Margin mixins
+// -------------------------
+
+// Left-right margin
+.margin-lr(@left: 10px; @right: @left) {
+    margin-left: @left;
+    margin-right: @right;
+}
+// Top-bottom margin
+.margin-tb(@top: 10px; @bottom: @top) {
+    margin-bottom: @bottom;
+    margin-top: @top;
+}
+
+
+// Helper mixins
+// -------------------------
+
+// Word Wrapping
+.word-wrap(@lines-to-show: 2; @font-size: @font-size-base; @line-height: @line-height-base) {
+    display: block;
+    display: -webkit-box;
+    //max-width: 400px;
+    height: @font-size * @line-height * @lines-to-show;
+    margin: 0 auto;
+    font-size: @font-size;
+    line-height: @line-height;
+    -webkit-line-clamp: @lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -333,7 +333,7 @@ gulp.task('default', ['copy', 'images', 'styles', 'scripts', 'templates'], funct
   gulp.watch([
     'src/components/**/*.{png,jpg,gif,svg}',
     'src/images/**/*.{png,jpg,gif,svg}'
-  ], ['imagemin']);
+  ], ['images']);
 
   // Styles
   gulp.watch([

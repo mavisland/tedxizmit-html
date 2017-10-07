@@ -1,0 +1,101 @@
+.site-header {
+  // Navbar Container
+  .navbar {
+    background-color: @navbar-default-bg;
+    border-color: @navbar-default-border;
+    .padding-tb();
+  }
+
+  // Navbar brand
+  .navbar-brand {
+    color: @navbar-default-brand-color;
+
+    &:hover,
+    &:focus {
+      background-color: @navbar-default-brand-hover-bg;
+      color: @navbar-default-brand-hover-color;
+    }
+  }
+
+  // Navbar Toggle
+  .navbar-toggle {
+    border-color: @navbar-default-toggle-border-color;
+
+    &:hover,
+    &:focus {
+      background-color: @navbar-default-toggle-hover-bg;
+    }
+  }
+
+  // Navbar Collapse
+  .navbar-collapse {
+    border-color: @navbar-default-border;
+  }
+
+  // Navigation Links
+  .navbar-nav {
+    > li > a {
+      border-radius: 24px;
+      color: @navbar-default-link-color;
+      font-size: 13px;
+      line-height: (18 / 13);
+      padding: 5px 18px;
+      .text-uppercase();
+
+      &:hover,
+      &:focus {
+        background-color: @navbar-default-link-hover-bg;
+        color: @navbar-default-link-hover-color;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-default-link-active-bg;
+        color: @navbar-default-link-active-color;
+      }
+    }
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    .navbar-nav {
+      .open .dropdown-menu {
+        > li > a {
+          color: @navbar-default-link-color;
+          &:hover,
+          &:focus {
+            color: @navbar-default-link-hover-color;
+            background-color: @navbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: @navbar-default-link-active-color;
+            background-color: @navbar-default-link-active-bg;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: @screen-lg) {
+    .navbar {
+      .padding-tb(29px);
+    }
+    .navbar-nav {
+      > li > a {
+        .margin-tb(16px);
+      }
+    }
+  }
+}
