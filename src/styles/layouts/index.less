@@ -1,0 +1,103 @@
+//
+// Ana Sayfa
+// --------------------------------------------------
+
+// Hero
+// -------------------------
+.hero {
+  position: relative;
+    left: 0;
+    top: 0;
+  height: 100%;
+  height: 100vh;
+  width: 100%;
+
+  .hero-inner,
+  .hero-content,
+  .hero-footer {
+    position: absolute;
+      left: 0;
+    width: 100%;
+  }
+
+  // Inner Content Wrapper
+  .hero-inner {
+    background: transparent url('../images/bg_hero.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    top: 0;
+  }
+
+  // Content Section
+  .hero-content {
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    .text-center();
+
+    .hero-title,
+    .btn {
+      .text-uppercase();
+    }
+
+    .hero-title {
+      letter-spacing: 1px;
+      position: relative;
+
+      &:after {
+        background-color: @brand-primary;
+        border-radius: 3px;
+        content: "";
+        position: absolute;
+          bottom: -6px;
+          left: 50%;
+        transform: translateX(-50%);
+        .size(80px, 6px);
+      }
+    }
+    .btn {}
+  }
+
+  // Counter Section
+  .hero-footer {
+    background-color: rgba(255, 43, 6, 0.51);
+    color: #fff;
+    height: 100px;
+    bottom: 0;
+    .text-uppercase();
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: (36 / 32);
+      .margin-tb(32px);
+    }
+  }
+
+  // Countdown
+  .hero-countdown {
+    font-weight: 300;
+    .text-center();
+
+    .count-item,
+    .count-time,
+    .count-label {
+      display: block;
+    }
+    .count-item {
+      float: left;
+      min-height: 1px;
+      .padding-tb(14px, 18px);
+      position: relative;
+      width: 25%;
+    }
+    .count-time {
+      font-size: 42px;
+      line-height: (48 / 42);
+    }
+    .count-label {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}

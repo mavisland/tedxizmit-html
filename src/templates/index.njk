@@ -1,7 +1,35 @@
+{% set bodyClass = "home" %}
 <!-- index.nunjucks -->
 {% extends "layouts/master.njk" %}
 
 {% block content %}
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <h1 class="hero-title">Eğer hayal edebilirsen yapabilirsin</h1>
+              <p>İhtiyacın olan şey sadece inanmak!</p>
+              <a href="#" class="btn btn-primary">Nasıl mı?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <h3 class="hero-title">Bizimle buluşmak için,</h3>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <div class="hero-countdown" data-countdown="2018/01/21 00:00:00"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="jumbotron">
     <div class="container">
       <h1>Hello, world!</h1>

@@ -215,19 +215,21 @@ gulp.task('images', function(){
 gulp.task('scripts', function(){
   gulp.src([
     'src/components/bootstrap/js/transition.js',
-    'src/components/bootstrap/js/alert.js',
-    'src/components/bootstrap/js/button.js',
-    'src/components/bootstrap/js/carousel.js',
+    // 'src/components/bootstrap/js/alert.js',
+    // 'src/components/bootstrap/js/button.js',
+    // 'src/components/bootstrap/js/carousel.js',
     'src/components/bootstrap/js/collapse.js',
     'src/components/bootstrap/js/dropdown.js',
-    'src/components/bootstrap/js/modal.js',
-    'src/components/bootstrap/js/tooltip.js',
-    'src/components/bootstrap/js/popover.js',
-    'src/components/bootstrap/js/scrollspy.js',
-    'src/components/bootstrap/js/tab.js',
-    'src/components/bootstrap/js/affix.js',
+    // 'src/components/bootstrap/js/modal.js',
+    // 'src/components/bootstrap/js/tooltip.js',
+    // 'src/components/bootstrap/js/popover.js',
+    // 'src/components/bootstrap/js/scrollspy.js',
+    // 'src/components/bootstrap/js/tab.js',
+    // 'src/components/bootstrap/js/affix.js',
     'src/components/magnific-popup/js/jquery.magnific-popup.js',
     'src/components/owl-carousel/js/owl.carousel.js',
+    'src/components/jquery.countdown/jquery.countdown.min.js',
+    'src/scripts/helpers/*.js',
     'src/scripts/main.js'
   ])
     .pipe(plumber(function(error) {
