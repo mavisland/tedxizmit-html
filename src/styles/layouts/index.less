@@ -110,3 +110,96 @@
     .text-center();
   }
 }
+
+// Nedir Bölümü
+.section-whats-ted {
+  background: #1e1e1e url('../images/bg_nedir.jpg') center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  .text-center();
+
+  .tab-titles {
+    .list-unstyled();
+    .clearfix();
+
+    > li {
+      // box-shadow: 0 15px 0 rgba(255, 255, 255, 0.35);
+      display: block;
+      float: left;
+      padding-bottom: 15px;
+      padding-left: 35px;
+      padding-right: 35px;
+      position: relative;
+      width: unit(100 / 3, %);
+
+      &:before,
+      &:after {
+        background-color: rgba(255, 255, 255, 0.35);
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      &:after {
+        display: block;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        height: 1px;
+      }
+      &:first-child,
+      &:last-child {
+        &:before {
+          display: block;
+          bottom: 0;
+          height: 30px;
+          width: 1px;
+        }
+      }
+      &:first-child {
+        &:before {
+          left: 0;
+        }
+      }
+      &:last-child {
+        &:before {
+          right: 0;
+        }
+      }
+      > a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        line-height: (36 / 24);
+        .text-center();
+        padding-bottom: 20px;
+        height: 56px;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid @link-color;
+          box-shadow: 0 1px 0 @link-color;
+          color: #fff;
+        }
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid @link-color;
+        box-shadow: 0 1px 0 @link-color;
+        color: #fff;
+        font-size: 36px;
+        line-height: 1;
+      }
+    }
+  }
+  .section-title {
+    text-transform: none;
+  }
+  .section-subtitle {
+    font-weight: 600;
+    .text-uppercase();
+  }
+}

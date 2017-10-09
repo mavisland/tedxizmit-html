@@ -224,7 +224,7 @@ gulp.task('scripts', function(){
     // 'src/components/bootstrap/js/tooltip.js',
     // 'src/components/bootstrap/js/popover.js',
     // 'src/components/bootstrap/js/scrollspy.js',
-    // 'src/components/bootstrap/js/tab.js',
+    'src/components/bootstrap/js/tab.js',
     // 'src/components/bootstrap/js/affix.js',
     'src/components/magnific-popup/js/jquery.magnific-popup.js',
     'src/components/owl-carousel/js/owl.carousel.js',
