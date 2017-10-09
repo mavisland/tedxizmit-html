@@ -1,0 +1,61 @@
+//
+// Sections
+// --------------------------------------------------
+
+// Section
+.section {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  position: relative;
+}
+
+// Section Inner Wrapper
+.section-inner {
+  position: relative;
+}
+
+// Section Header Wrapper
+.section-header {
+  position: relative;
+  .text-center();
+}
+
+// Section Title
+.section-title {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 40px;
+  margin-top: 0;
+  padding-bottom: 30px;
+  position: relative;
+  .text-uppercase();
+
+  &:after {
+    background-color: @brand-primary;
+    border-radius: 3px;
+    content: "";
+    position: absolute;
+      bottom: 0;
+      left: 50%;
+    transform: translateX(-50%);
+    .size(80px, 6px);
+  }
+  @media (min-width: @screen-sm) {
+    font-size: 24px;
+  }
+  @media (min-width: @screen-md) {
+    font-size: 32px;
+  }
+  @media (min-width: @screen-lg) {
+    font-size: 40px;
+  }
+}
+
+// Section Subtitle
+.section-subtitle {}
+
+// Section Body Wrapper
+.section-body {
+  position: relative;
+}
