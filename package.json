@@ -30,7 +30,8 @@
     "gulp-plumber": "*",
     "gulp-rename": "*",
     "gulp-uglify": "*",
-    "gulp-util": "*"
+    "gulp-util": "*",
+    "gulp.spritesmith": "^6.5.1"
   },
   "repository": {
     "type": "git",

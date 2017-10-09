@@ -1,0 +1,23 @@
+.icon-sprite(@sprite) {
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+.icon-sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .icon-sprite(@sprite);
+  }
+  .icon-sprites(@sprites, @i + 1);
+}
+
+.icon {
+    background-image: url(@spritesheet-image);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-sprites(@spritesheet-sprites);

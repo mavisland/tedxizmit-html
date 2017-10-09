@@ -18,7 +18,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
 // Image related plugins.
-var imageMin = require('gulp-imagemin');
+var imageMin    = require('gulp-imagemin');
+var spritesmith = require('gulp.spritesmith');
 
 // Template related plugins.
 var data     = require('gulp-data');
@@ -253,6 +254,23 @@ gulp.task('scripts', function(){
 });
 
 /**
+ * Task: 'sprite'.
+ */
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('src/sprites/*.{png,jpg,gif}').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite-variables.less',
+    imgPath: '../images/sprite.png',
+    padding: 3,
+    imgOpts: {
+      quality: 100,
+    }
+  }));
+  spriteData.img.pipe(gulp.dest('src/images/'));
+  spriteData.css.pipe(gulp.dest('src/styles/helpers/'));
+});
+
+/**
  * Task: 'styles'.
  *
  * Compiles Less, Autoprefixes it and Minifies CSS.
@@ -336,6 +354,11 @@ gulp.task('default', ['copy', 'images', 'styles', 'scripts', 'templates'], funct
     'src/components/**/*.{png,jpg,gif,svg}',
     'src/images/**/*.{png,jpg,gif,svg}'
   ], ['images']);
+
+  // Sprites
+  gulp.watch([
+    'src/sprites/*.{png,jpg,gif}'
+  ], ['sprite']);
 
   // Styles
   gulp.watch([
