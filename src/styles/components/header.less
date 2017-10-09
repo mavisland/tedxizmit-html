@@ -19,6 +19,9 @@
   .navbar-brand {
     color: @navbar-default-brand-color;
 
+    .brand-image-alt {
+      display: none;
+    }
     &:hover,
     &:focus {
       background-color: @navbar-default-brand-hover-bg;
@@ -142,6 +145,14 @@ body.home .site-header {
     .navbar {
       background-color: transparent;
       border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+    .navbar-brand {
+      .brand-image {
+        display: none;
+      }
+      .brand-image-alt {
+        display: block;
+      }
     }
     .navbar-nav {
       > li > a {
