@@ -7,17 +7,23 @@
 .icon-sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
   @sprite: extract(@sprites, @i);
   @sprite-name: e(extract(@sprite, 10));
-  .@{sprite-name} {
+  .@{sprite-name}:before {
     .icon-sprite(@sprite);
   }
   .icon-sprites(@sprites, @i + 1);
 }
 
 .icon {
-    background-image: url(@spritesheet-image);
-    background-repeat: no-repeat;
     display: inline-block;
-    vertical-align: middle;
+    position: relative;
+
+    &:before {
+      background-image: url(@spritesheet-image);
+      background-repeat: no-repeat;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+    }
 }
 
 .icon-sprites(@spritesheet-sprites);

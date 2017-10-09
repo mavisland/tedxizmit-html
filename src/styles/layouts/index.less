@@ -31,6 +31,8 @@
   // Content Section
   .hero-content {
     color: #fff;
+    font-size: 24px;
+    line-height: (30 / 24);
     top: 50%;
     transform: translateY(-50%);
     .text-center();
@@ -41,7 +43,10 @@
     }
 
     .hero-title {
+      font-size: 30px;
+      line-height: (50 / 30);
       letter-spacing: 1px;
+      margin-bottom: 30px;
       position: relative;
 
       &:after {
@@ -55,11 +60,18 @@
         .size(80px, 6px);
       }
     }
+    .btn {
+      font-size: 18px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   // Counter Section
   .hero-footer {
-    background-color: rgba(255, 43, 6, 0.51);
+    background-color: rgba(255, 43, 6, 0.8);
     color: #fff;
     height: 100px;
     bottom: 0;
@@ -86,9 +98,16 @@
     .count-item {
       float: left;
       min-height: 1px;
-      .padding-tb(14px, 18px);
+      .padding-tb(16px, 20px);
       position: relative;
       width: 25%;
+
+      &:nth-child(2) {
+        background-color: #ff715f;
+      }
+      &:nth-child(3) {
+        background-color: #ff6044;
+      }
     }
     .count-time {
       font-size: 42px;
@@ -201,5 +220,116 @@
   .section-subtitle {
     font-weight: 600;
     .text-uppercase();
+  }
+}
+
+// Başvuru Bölümü
+.section-apply {
+  background-color: #eee;
+  color: #000;
+
+  .apply-process {
+    .list-unstyled();
+
+    > li {
+      margin-bottom: 10px;
+    }
+    .process {
+      .text-center();
+
+      &:hover,
+      &:focus {
+        .process-icon {
+          border-color: @link-color;
+
+          .icon {
+            border-color: #000;
+          }
+        }
+      }
+    }
+    .process-icon {
+      border-bottom: 2px solid #bebebe;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+
+      &:before {
+        background-color: @link-color;
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+          bottom: -11px;
+          left: 50%;
+        transform: translateX(-50%);
+        .square(20px);
+      }
+
+      .icon {
+        border: 1px solid transparent;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+        .square(115px);
+
+        &:before {
+          position: absolute;
+            left: 50%;
+            top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .process-title {
+      color: #000;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: (24 / 17);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      .text-uppercase();
+      position: relative;
+
+      &:after {
+        background-color: @brand-primary;
+        content: "";
+        position: absolute;
+          bottom: 0;
+          left: 50%;
+        transform: translateX(-50%);
+        .size(34px, 3px);
+      }
+    }
+    .process-details {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: (20 / 12);
+      height: 100px;
+      overflow-y: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  @media (min-width: @screen-sm) {
+    .apply-process {
+      .clearfix();
+
+      > li {
+        float: left;
+        width: 20%;
+      }
+      .process {
+        &:hover,
+        &:focus {
+          .process-details {
+            .opacity(1);
+          }
+        }
+      }
+      .process-details {
+        .opacity(0);
+      }
+    }
   }
 }
