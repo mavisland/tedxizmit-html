@@ -422,3 +422,101 @@
     }
   }
 }
+
+// Etkinlik Programı
+.section-schedule {
+  padding-bottom: 0;
+  padding-top: 0;
+
+  .section-header {
+    background-color: #eee;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    .text-center();
+  }
+  .schedule-dates {
+    .list-unstyled();
+
+    > li {
+      display: inline-block;
+
+      > a {
+        color: #000;
+        display: block;
+        font-size: 16px;
+        padding: 10px 15px;
+        .text-uppercase();
+
+        &:hover,
+        &:focus {
+          background-color: @link-color;
+          color: #fff;
+        }
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @link-color;
+        color: #fff;
+      }
+    }
+  }
+  .section-body {
+    background-color: #f5f5f5;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .event-schedule {
+    position: relative;
+  }
+  // .schedule {}
+  .schedule-time {
+    padding-bottom: 10px;
+  }
+  // .schedule-content {}
+  .schedule-title {
+    font-size: 18px;
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+  // .schedule-text {}
+  @media (max-width: (@screen-sm - 1)) {
+    .schedule {
+      margin-bottom: 10px;
+      .text-center();
+    }
+    .schedule-time {
+      > span {
+        display: inline-block;
+
+        + span:before {
+          content: "/";
+          padding: 0 5px;
+          color: inherit;
+        }
+      }
+    }
+    .schedule-content {
+      border-top: 2px solid @link-color;
+      padding-top: 10px;
+    }
+  }
+  @media (min-width: @screen-sm) {
+    .schedule-time {
+      > span {
+        display: block;
+        .text-center();
+      }
+    }
+    .schedule-content {
+      border-left: 2px solid @link-color;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+    .schedule-title {
+      font-size: 24px;
+    }
+  }
+}
