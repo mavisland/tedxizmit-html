@@ -333,3 +333,92 @@
     }
   }
 }
+
+// Konuşmacılar Bölümü
+.section-speakers {
+  .speakers {
+    .clearfix();
+    padding-top: 20px;
+  }
+  .speaker {
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(4);
+    margin-bottom: 30px;
+  }
+  .speaker-object {
+    overflow: hidden;
+    position: relative;
+    height: 260px;
+    margin-bottom: 30px;
+    width: 100%;
+
+    > img {
+      .img-responsive();
+    }
+  }
+  .social-links {
+    height: 48px;
+    margin-bottom: 0;
+    .list-unstyled();
+    padding-left: 16px;
+    padding-right: 24px;
+    position: absolute;
+      bottom: 0;
+      right: -16px;
+
+    &:before {
+      background-color: rgba(255, 43, 8, 0.8);
+      content: "";
+      position: absolute;
+        left: 0;
+        top: 0;
+      transform: skewX(35deg);
+      .square(100%);
+    }
+    > li {
+      display: inline-block;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      position: relative;
+
+      > a {
+        color: #fff;
+        display: block;
+        font-size: 18px;
+        line-height: (24 / 18);
+        height: 24px;
+        .text-center();
+        width: 36px;
+
+        &:hover,
+        &:focus {
+          .opacity(.8);
+        }
+      }
+    }
+  }
+  .speaker-body {
+    position: relative;
+    .text-center();
+  }
+  .speaker-title {
+    color: #000;
+    font-size: 28px;
+    line-height: (32 / 28);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    .text-uppercase();
+    position: relative;
+
+    &:after {
+      background-color: @brand-primary;
+      content: "";
+      position: absolute;
+        bottom: 0;
+        left: 50%;
+      transform: translateX(-50%);
+      .size(34px, 3px);
+    }
+  }
+}
