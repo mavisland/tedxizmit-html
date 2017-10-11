@@ -18,7 +18,10 @@
 </head>
 <body class="{{ bodyClass }}"></body>
 {% include "partials/navbar.njk" %}
+  <div class="site-content">
 {% block content %} {% endblock %}
+{% include "partials/content-bottom.njk" %}
+  </div>
 {% include "partials/footer.njk" %}
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/scripts.min.js"></script>
