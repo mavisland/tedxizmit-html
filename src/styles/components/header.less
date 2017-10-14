@@ -5,7 +5,12 @@
 .site-header {
   display: block;
   position: relative;
+    left: 0;
+    top: 0;
+  transform: translateZ(0);
+  transition: all .4s ease;
   width: 100%;
+  z-index: @zindex-navbar-fixed;
 
   // Navbar Container
   .navbar {
@@ -77,20 +82,6 @@
       }
     }
   }
-
-  &:not(.site-header-alt) {
-    .navbar {
-      box-shadow: 0 2px 15px 0 rgba(0,0,0,.1);
-    }
-  }
-
-  // Fixed Header
-  &.fixed-nav {
-    .navbar {
-      .padding-tb(5px);
-    }
-  }
-
   @media (max-width: @grid-float-breakpoint-max) {
     .navbar-nav {
       .open .dropdown-menu {
@@ -115,11 +106,19 @@
     }
   }
   @media (min-width: @screen-sm) {
-    position: fixed;
-      left: 0;
-      top: 0;
-    width: 100%;
-    z-index: @zindex-navbar-fixed;
+    .scroll-active & {
+      background-color: #FFFFFF;
+      border: 0 none;
+      box-shadow: 0 3px 3px 0 rgba(24, 24, 24, 0.1);
+      height: 70px;
+      padding-top: 0;
+      position: fixed;
+      transition: top 500ms ease;
+
+      .navbar {
+        .padding-tb(5px);
+      }
+    }
   }
   @media (min-width: @screen-lg) {
     .navbar {
@@ -140,22 +139,22 @@
 
 // Transparent Header
 // -------------------------
-body.home .site-header {
-  &:not(.fixed-nav) {
-    .navbar {
-      background-color: transparent;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    .navbar-brand {
-      .brand-image {
-        display: none;
+body.home {
+  &:not(.scroll-active) {
+    .site-header {
+      .navbar {
+        background-color: transparent;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       }
-      .brand-image-alt {
-        display: block;
+      .navbar-brand {
+        .brand-image {
+          display: none;
+        }
+        .brand-image-alt {
+          display: block;
+        }
       }
-    }
-    .navbar-nav {
-      > li > a {
+      .navbar-nav > li > a {
         color: #fff;
       }
     }
