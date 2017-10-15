@@ -1,0 +1,41 @@
+//
+// Inner Styles
+// --------------------------------------------------
+
+// Banner
+// -------------------------
+.banner {
+  height: 100px;
+  position: relative;
+  width: 100%;
+
+  .banner-image {
+    background-color: #efefef;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+      left: 0;
+      top: 0;
+    .square(100%);
+  }
+  .banner-content {
+    position: absolute;
+      left: 50%;
+      top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .banner-title {
+    color: #000;
+    .text-uppercase();
+  }
+  @media (min-width: @screen-sm) {
+    height: 200px;
+  }
+  @media (min-width: @screen-md) {
+    height: 240px;
+  }
+  @media (min-width: @screen-lg) {
+    height: 300px;
+  }
+}

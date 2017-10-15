@@ -1,0 +1,106 @@
+//
+// Cards
+// --------------------------------------------------
+
+// Card
+.card {
+  position: relative;
+
+  // Card Inner
+  .card-inner {
+    position: relative;
+  }
+
+  // Card Object
+  .card-object {
+    position: relative;
+
+    img {
+      display: block;
+      position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+      width: 100%;
+    }
+  }
+
+  // Card Body
+  .card-body {
+    padding: 15px 10px;
+    position: relative;
+  }
+
+  // Title
+  .card-title {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  // Card Button
+  .card-btn {
+    .btn;
+    background-color: #fff;
+    border-color: #000;
+    border-radius: 24px;
+    color: #000;
+    padding: 10px 35px;
+    .text-uppercase();
+
+    &:hover,
+    &:focus {
+      background-color: @brand-primary;
+      border-color: @brand-primary;
+      color: #fff;
+    }
+  }
+}
+
+// Cards Wrapper
+.cards {
+  .make-row();
+}
+
+// Cards / Three Columns
+.cards-3-col {
+  .card {
+    .make-xs-column(12);
+    .make-sm-column(4);
+  }
+}
+
+// Hover Cards
+.cards-hover {
+  .card {
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      .text-center();
+      position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        top: 10px;
+    }
+    .card-body-inner {
+      position: absolute;
+        left: 50%;
+        top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .card-btn {
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+      margin-top: 20px;
+
+      &:hover,
+      &:focus {
+        background-color: @brand-primary;
+        border-color: @brand-primary;
+        color: #fff;
+      }
+    }
+  }
+}
