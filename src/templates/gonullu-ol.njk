@@ -1,0 +1,490 @@
+{% set bodyClass = "gonullu-ol" %}
+<!-- gonullu-ol.njk -->
+{% extends "layouts/master.njk" %}
+
+{% block content %}
+    <div class="banner">
+      <div class="banner-image" style="background-image: url(assets/images/banner.jpg);"></div>
+      <div class="banner-content">
+        <h1 class="banner-title">Gönüllü Ol</h1>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-inner">
+        <div class="section-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <form action="#" class="form-volunteer">
+                  <fieldset id="kisisel">
+                    <legend>Kişisel Bilgiler</legend>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-3">
+                        <div class="form-group photo-upload">
+                          <label for="imgInp">Fotoğrafınız</label>
+                          <div class="preview">
+                            <img id="blah" src="assets/images/basvuru_fotograf.png" alt="Fotoğraf" />
+                          </div>
+                          <input type='file' id="imgInp">
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-9">
+                        <div class="form-group">
+                          <label for="tckimlik" class="control-label col-xs-12 col-sm-3">TC Kimlik No</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="tckimlik" id="tckimlik" placeholder="TC Kimlik No">
+                          </div>
+                        </div><!-- tckimlik -->
+                        <div class="form-group">
+                          <label for="adi" class="control-label col-xs-12 col-sm-3">Adınız</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="adi" id="adi" placeholder="Adınız">
+                          </div>
+                        </div><!-- adi -->
+                        <div class="form-group">
+                          <label for="soyadi" class="control-label col-xs-12 col-sm-3">Soyadınız</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="soyadi" id="soyadi" placeholder="Soyadınız">
+                          </div>
+                        </div><!-- soyadi -->
+                        <div class="form-group">
+                          <label for="uyruk" class="control-label col-xs-12 col-sm-3">Uyruğunuz</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <select name="uyruk" id="uyruk" class="form-control">
+                              <option value="0">Lütfen Seçiniz</option>
+                              <option value="turkiye">Türkiye Cumhuriyeti</option>
+                              <option value="diger">Diğer</option>
+                            </select>
+                          </div>
+                        </div><!-- uyruk -->
+                        <div class="form-group">
+                          <label for="cinsiyet" class="control-label col-xs-12 col-sm-3">Cinsiyet</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <select name="cinsiyet" id="cinsiyet" class="form-control">
+                              <option value="0">Seçiniz</option>
+                              <option value="kadin">Kadın</option>
+                              <option value="erkek">Erkek</option>
+                            </select>
+                          </div>
+                        </div><!-- cinsiyet -->
+                        <div class="form-group">
+                          <label for="dogum_tarihi" class="control-label col-xs-12 col-sm-3">Doğum Tarihi</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="dogum_tarihi" id="dogum_tarihi" placeholder="Doğum Tarihi">
+                          </div>
+                        </div><!-- dogum_tarihi -->
+                        <div class="form-group">
+                          <label for="dogum_yeri_il" class="control-label col-xs-12 col-sm-3">Doğum Yeri</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-6">
+                                <select name="dogum_yeri_il" id="dogum_yeri_il" class="form-control">
+                                  <option value="0">Lütfen Seçiniz</option>
+                                  <option value="1">Adana</option>
+                                  <option value="2">Adıyaman</option>
+                                  <option value="3">Afyonkarahisar</option>
+                                  <option value="4">Ağrı</option>
+                                  <option value="5">Amasya</option>
+                                  <option value="6">Ankara</option>
+                                  <option value="7">Antalya</option>
+                                  <option value="8">Artvin</option>
+                                  <option value="9">Aydın</option>
+                                  <option value="10">Balıkesir</option>
+                                  <option value="11">Bilecik</option>
+                                  <option value="12">Bingöl</option>
+                                  <option value="13">Bitlis</option>
+                                  <option value="14">Bolu</option>
+                                  <option value="15">Burdur</option>
+                                  <option value="16">Bursa</option>
+                                  <option value="17">Çanakkale</option>
+                                  <option value="18">Çankırı</option>
+                                  <option value="19">Çorum</option>
+                                  <option value="20">Denizli</option>
+                                  <option value="21">Diyarbakır</option>
+                                  <option value="22">Edirne</option>
+                                  <option value="23">Elazığ</option>
+                                  <option value="24">Erzincan</option>
+                                  <option value="25">Erzurum</option>
+                                  <option value="26">Eskişehir</option>
+                                  <option value="27">Gaziantep</option>
+                                  <option value="28">Giresun</option>
+                                  <option value="29">Gümüşhane</option>
+                                  <option value="30">Hakkâri</option>
+                                  <option value="31">Hatay</option>
+                                  <option value="32">Isparta</option>
+                                  <option value="33">Mersin</option>
+                                  <option value="34">İstanbul</option>
+                                  <option value="35">İzmir</option>
+                                  <option value="36">Kars</option>
+                                  <option value="37">Kastamonu</option>
+                                  <option value="38">Kayseri</option>
+                                  <option value="39">Kırklareli</option>
+                                  <option value="40">Kırşehir</option>
+                                  <option value="41">Kocaeli</option>
+                                  <option value="42">Konya</option>
+                                  <option value="43">Kütahya</option>
+                                  <option value="44">Malatya</option>
+                                  <option value="45">Manisa</option>
+                                  <option value="46">Kahramanmaraş</option>
+                                  <option value="47">Mardin</option>
+                                  <option value="48">Muğla</option>
+                                  <option value="49">Muş</option>
+                                  <option value="50">Nevşehir</option>
+                                  <option value="51">Niğde</option>
+                                  <option value="52">Ordu</option>
+                                  <option value="53">Rize</option>
+                                  <option value="54">Sakarya</option>
+                                  <option value="55">Samsun</option>
+                                  <option value="56">Siirt</option>
+                                  <option value="57">Sinop</option>
+                                  <option value="58">Sivas</option>
+                                  <option value="59">Tekirdağ</option>
+                                  <option value="60">Tokat</option>
+                                  <option value="61">Trabzon</option>
+                                  <option value="62">Tunceli</option>
+                                  <option value="63">Şanlıurfa</option>
+                                  <option value="64">Uşak</option>
+                                  <option value="65">Van</option>
+                                  <option value="66">Yozgat</option>
+                                  <option value="67">Zonguldak</option>
+                                  <option value="68">Aksaray</option>
+                                  <option value="69">Bayburt</option>
+                                  <option value="70">Karaman</option>
+                                  <option value="71">Kırıkkale</option>
+                                  <option value="72">Batman</option>
+                                  <option value="73">Şırnak</option>
+                                  <option value="74">Bartın</option>
+                                  <option value="75">Ardahan</option>
+                                  <option value="76">Iğdır</option>
+                                  <option value="77">Yalova</option>
+                                  <option value="78">Karabük</option>
+                                  <option value="79">Kilis</option>
+                                  <option value="80">Osmaniye</option>
+                                  <option value="81">Düzce</option>
+                                </select><!-- dogum_yeri_il -->
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <select id="dogum_yeri_ilce" name="dogum_yeri_ilce" class="form-control">
+                                  <option value="454">Aladağ(Karsantı)</option>
+                                  <option value="455">Ceyhan</option>
+                                  <option value="1">Çukurova</option>
+                                  <option value="456">Feke</option>
+                                  <option value="727">Gazimagosa</option>
+                                  <option value="2">Girne</option>
+                                  <option value="728">Güzelyurt</option>
+                                  <option value="457">İmamoğlu</option>
+                                  <option value="229">Karaisalı</option>
+                                  <option value="230">Karataş</option>
+                                  <option value="458">Kozan</option>
+                                  <option value="962">Merkez</option>
+                                  <option value="729">Pozantı</option>
+                                  <option value="730">Saimbeyli</option>
+                                  <option value="731">Sarıçam</option>
+                                  <option value="231">Seyhan</option>
+                                  <option value="459">Tufanbeyli</option>
+                                  <option value="232">Yumurtalık</option>
+                                  <option value="732">Yüreğir</option>
+                                </select><!-- dogum_yeri_ilce -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset id="iletisim">
+                    <legend>İletişim Bilgileri</legend>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+                        <div class="form-group">
+                          <label for="eposta" class="control-label col-xs-12 col-sm-3">E-posta Adresi</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="eposta" id="eposta" placeholder="E-posta Adresi">
+                          </div>
+                        </div><!-- eposta -->
+                        <div class="form-group">
+                          <label for="telefon" class="control-label col-xs-12 col-sm-3">Telefon</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="telefon" id="telefon" placeholder="Telefon">
+                          </div>
+                        </div><!-- telefon -->
+                        <div class="form-group">
+                          <label for="adres" class="control-label col-xs-12 col-sm-3">Adres</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <textarea name="adres" id="adres" rows="10" class="form-control" placeholder="Adres"></textarea>
+                          </div>
+                        </div><!-- adres -->
+                        <div class="form-group">
+                          <label for="adres_il" class="control-label col-xs-12 col-sm-3">İl</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-6">
+                                <select name="adres_il" id="adres_il" class="form-control">
+                                  <option value="0">Lütfen Seçiniz</option>
+                                  <option value="1">Adana</option>
+                                  <option value="2">Adıyaman</option>
+                                  <option value="3">Afyonkarahisar</option>
+                                  <option value="4">Ağrı</option>
+                                  <option value="5">Amasya</option>
+                                  <option value="6">Ankara</option>
+                                  <option value="7">Antalya</option>
+                                  <option value="8">Artvin</option>
+                                  <option value="9">Aydın</option>
+                                  <option value="10">Balıkesir</option>
+                                  <option value="11">Bilecik</option>
+                                  <option value="12">Bingöl</option>
+                                  <option value="13">Bitlis</option>
+                                  <option value="14">Bolu</option>
+                                  <option value="15">Burdur</option>
+                                  <option value="16">Bursa</option>
+                                  <option value="17">Çanakkale</option>
+                                  <option value="18">Çankırı</option>
+                                  <option value="19">Çorum</option>
+                                  <option value="20">Denizli</option>
+                                  <option value="21">Diyarbakır</option>
+                                  <option value="22">Edirne</option>
+                                  <option value="23">Elazığ</option>
+                                  <option value="24">Erzincan</option>
+                                  <option value="25">Erzurum</option>
+                                  <option value="26">Eskişehir</option>
+                                  <option value="27">Gaziantep</option>
+                                  <option value="28">Giresun</option>
+                                  <option value="29">Gümüşhane</option>
+                                  <option value="30">Hakkâri</option>
+                                  <option value="31">Hatay</option>
+                                  <option value="32">Isparta</option>
+                                  <option value="33">Mersin</option>
+                                  <option value="34">İstanbul</option>
+                                  <option value="35">İzmir</option>
+                                  <option value="36">Kars</option>
+                                  <option value="37">Kastamonu</option>
+                                  <option value="38">Kayseri</option>
+                                  <option value="39">Kırklareli</option>
+                                  <option value="40">Kırşehir</option>
+                                  <option value="41">Kocaeli</option>
+                                  <option value="42">Konya</option>
+                                  <option value="43">Kütahya</option>
+                                  <option value="44">Malatya</option>
+                                  <option value="45">Manisa</option>
+                                  <option value="46">Kahramanmaraş</option>
+                                  <option value="47">Mardin</option>
+                                  <option value="48">Muğla</option>
+                                  <option value="49">Muş</option>
+                                  <option value="50">Nevşehir</option>
+                                  <option value="51">Niğde</option>
+                                  <option value="52">Ordu</option>
+                                  <option value="53">Rize</option>
+                                  <option value="54">Sakarya</option>
+                                  <option value="55">Samsun</option>
+                                  <option value="56">Siirt</option>
+                                  <option value="57">Sinop</option>
+                                  <option value="58">Sivas</option>
+                                  <option value="59">Tekirdağ</option>
+                                  <option value="60">Tokat</option>
+                                  <option value="61">Trabzon</option>
+                                  <option value="62">Tunceli</option>
+                                  <option value="63">Şanlıurfa</option>
+                                  <option value="64">Uşak</option>
+                                  <option value="65">Van</option>
+                                  <option value="66">Yozgat</option>
+                                  <option value="67">Zonguldak</option>
+                                  <option value="68">Aksaray</option>
+                                  <option value="69">Bayburt</option>
+                                  <option value="70">Karaman</option>
+                                  <option value="71">Kırıkkale</option>
+                                  <option value="72">Batman</option>
+                                  <option value="73">Şırnak</option>
+                                  <option value="74">Bartın</option>
+                                  <option value="75">Ardahan</option>
+                                  <option value="76">Iğdır</option>
+                                  <option value="77">Yalova</option>
+                                  <option value="78">Karabük</option>
+                                  <option value="79">Kilis</option>
+                                  <option value="80">Osmaniye</option>
+                                  <option value="81">Düzce</option>
+                                </select><!-- adres_il -->
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <select id="adres_ilce" name="adres_ilce" class="form-control">
+                                  <option value="454">Aladağ(Karsantı)</option>
+                                  <option value="455">Ceyhan</option>
+                                  <option value="1">Çukurova</option>
+                                  <option value="456">Feke</option>
+                                  <option value="727">Gazimagosa</option>
+                                  <option value="2">Girne</option>
+                                  <option value="728">Güzelyurt</option>
+                                  <option value="457">İmamoğlu</option>
+                                  <option value="229">Karaisalı</option>
+                                  <option value="230">Karataş</option>
+                                  <option value="458">Kozan</option>
+                                  <option value="962">Merkez</option>
+                                  <option value="729">Pozantı</option>
+                                  <option value="730">Saimbeyli</option>
+                                  <option value="731">Sarıçam</option>
+                                  <option value="231">Seyhan</option>
+                                  <option value="459">Tufanbeyli</option>
+                                  <option value="232">Yumurtalık</option>
+                                  <option value="732">Yüreğir</option>
+                                </select><!-- adres_ilce -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset id="meslek">
+                    <legend>Mesleki Bilgiler</legend>
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+                        <div class="form-group">
+                          <label for="calisma_durumu" class="control-label col-xs-12 col-sm-3">Çalışma Durumu</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <select name="calisma_durumu" id="calisma_durumu" class="form-control">
+                              <option value="-1">Lütfen Seçiniz</option>
+                              <option value="0">Çalışıyor</option>
+                              <option value="1">Çalışmıyor</option>
+                              <option value="2">Öğrenci</option>
+                              <option value="3">Çalışıyor / Öğrenci</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset id="ogrenim">
+                    <legend>Öğrenim Bilgileri</legend>
+                    <div class="row">
+                      <div class="col-sm-9 col-sm-offset-3">
+                        <div class="form-group">
+                          <label for="ogrenim_durumu" class="control-label col-xs-12 col-sm-3">Öğrenim Durumu</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <select name="ogrenim_durumu" id="ogrenim_durumu" class="form-control">
+                              <option value="-1">Lütfen Seçiniz</option>
+                              <option value="0">İlköğretim Mezunu</option>
+                              <option value="1">Lise Mezunu</option>
+                              <option value="2">Üniversite Öğrencisi</option>
+                              <option value="3">Üniversite Mezunu</option>
+                              <option value="4">Yüksek Lisans Öğrencisi</option>
+                              <option value="5">Yüksek Lisans Mezunu</option>
+                              <option value="6">Doktora Öğrencisi</option>
+                              <option value="7">Doktora Mezunu</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="universite" class="control-label col-xs-12 col-sm-3">Üniversite</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="universite" id="universite" placeholder="Üniversite">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="bolum" class="control-label col-xs-12 col-sm-3">Bölüm Adı</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control" name="bolum" id="bolum" placeholder="Bölüm Adı">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <fieldset id="gonulluluk">
+                    <legend>Gönüllülük Sağlamak İstediğiniz Alanlar</legend>
+                    <div class="row">
+                      <div class="col-sm-9 col-sm-offset-3">
+                        <div class="form-group">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Turnuva Gönüllüsü <span>(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s)</span>
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Proje Gönüllüsü <span>(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s)</span>
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Ofis Gönüllüsü <span>(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s)</span>
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Etkinlik Gönüllüsü <span>(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s)</span>
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Eğitmen Gönüllü <span>(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s)</span>
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Araştırma ve Çeviri Gönüllüsü <span>(Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s)</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="neden" class="control-label col-xs-12 col-sm-3">Neden Gönüllü Olmak İstiyorsunuz?</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <textarea name="neden" id="neden" rows="10" class="form-control" placeholder="Neden Gönüllü Olmak İstiyorsunuz?"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="neden" class="control-label col-xs-12 col-sm-3">Daha Önce TEDx'in herhangi bir organizasyonuna katıldınız mı?</label>
+                          <div class="col-sm-9">
+                            <label class="radio-inline">
+                              <input type="radio" name="katilim" id="inlineRadio1" value="option1"> Evet
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="katilim" id="inlineRadio2" value="option2"> Hayır
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="neden" class="control-label col-xs-12 col-sm-3">Daha Önce herhangi bir gönüllü çalışma deneyiminiz oldu mu?</label>
+                          <div class="col-sm-9">
+                            <label class="radio-inline">
+                              <input type="radio" name="katilim" id="inlineRadio1" value="option1"> Evet
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="katilim" id="inlineRadio2" value="option2"> Hayır
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="neden" class="control-label col-xs-12 col-sm-3">Çocuklarla çalışma deneyiminiz var mı?</label>
+                          <div class="col-sm-9">
+                            <label class="radio-inline">
+                              <input type="radio" name="katilim" id="inlineRadio1" value="option1"> Evet
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="katilim" id="inlineRadio2" value="option2"> Hayır
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="diger_hususlar" class="control-label col-xs-12 col-sm-3">Kendiniz ile ilgili belirtmek istediğiniz diğer hususlar</label>
+                          <div class="col-xs-12 col-sm-9">
+                            <textarea name="diger_hususlar" id="diger_hususlar" rows="8" class="form-control" placeholder="Kendiniz ile ilgili belirtmek istediğiniz diğer hususlar"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="form-group text-center">
+                    <button type="submit" class="btn btn-action">Başvuru Bilgilerimi Kaydet</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
