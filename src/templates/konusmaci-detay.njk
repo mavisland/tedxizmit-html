@@ -1,0 +1,101 @@
+{% set bodyClass = "konusmaci-detay" %}
+<!-- konusmaci-detay.njk -->
+{% extends "layouts/master.njk" %}
+
+{% block content %}
+    <div class="banner">
+      <div class="banner-image" style="background-image: url(assets/images/banner.jpg);"></div>
+      <div class="banner-content">
+        <h1 class="banner-title">Konuşmacılar</h1>
+      </div>
+    </div>
+    <div class="section section-speaker-single">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-sm-push-3">
+                <h2 class="section-title">Perçin İmrek</h2>
+              </div>
+              <div class="col-sm-3 col-sm-pull-6">
+                <a href="#" class="page-link page-previous">
+                  <span>Önceki Konuşmacı</span>
+                </a>
+              </div>
+              <div class="col-sm-3">
+                <a href="#" class="page-link page-next">
+                  <span>Sonraki Konuşmacı</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="speaker-single">
+                  <div class="speaker-object">
+                    <div class="object-photo">
+                      <img src="assets/images/konusmaci_detay.jpg" alt="Perçin İmrek">
+                      <a href="#" class="section-toggle">
+                        <span class="icon"><i class="fa fa-fw fa-video-camera"></i></span>
+                        <span class="label">Konuşmacı Videosu</span>
+                      </a>
+                    </div>
+                    <div class="object-video">
+                      <a href="#" class="section-toggle">
+                        <span class="icon"><i class="fa fa-fw fa-times"></i></span>
+                        <span class="label">Videoyu Kapat</span>
+                      </a>
+                      <iframe src="http://www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                    </div>
+                  </div>
+                  <div class="speaker-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div class="speaker-footer">
+                    <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12">
+                <h3 class="qualifications-title">Konuşmacı Nitelikleri</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="qualifications">
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="qualifications">
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                  <p><strong>LOREM IPSUM :</strong> Lorem ipsum is simply dummy text of the printing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

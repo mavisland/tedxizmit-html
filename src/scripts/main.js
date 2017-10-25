@@ -29,4 +29,43 @@ jQuery(document).ready(function($){
   $("#imgInp").change(function() {
     readURL(this);
   });
+
+  //
+  // Konuşmacı Detayı Görüntü/Video Toggle
+  var speakerObject      = $('.section-speaker-single .speaker-object');
+  var speakerObjectPhoto = $('.section-speaker-single .object-photo');
+  var speakerObjectVideo = $('.section-speaker-single .object-video');
+  var speakerToggle      = $('.section-speaker-single .section-toggle');
+  var speakerIframe      = $('.section-speaker-single .object-video iframe');
+  if (speakerIframe.length) {
+    var speakerIframeSrc = speakerIframe.attr("src");
+  }
+  speakerToggle.click(function(e){
+    var iframe = $('.section-speaker-single .object-video iframe');
+    var video  = $('.section-speaker-single .object-video video');
+
+    if (speakerObjectPhoto.is(":visible")) {
+      speakerObject.addClass("active");
+      speakerObjectPhoto.fadeOut();
+      speakerObjectVideo.fadeIn();
+
+      if (iframe.length) {
+        iframe.attr("src", speakerIframeSrc);
+        return false;
+      }
+    } else {
+      speakerObject.removeClass("active");
+      speakerObjectVideo.fadeOut();
+      speakerObjectPhoto.fadeIn();
+
+      if (iframe.length) {
+        iframe.attr("src", "");
+        return false;
+      }
+      if (video.length) {
+        video.pause();
+      }
+    }
+    e.preventDefault();
+  })
 });
