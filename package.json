@@ -2,7 +2,7 @@
   "name": "tedxizmit-html",
   "description": "TEDx İzmit Web Sitesi",
   "version": "1.1.0",
-  "homepage": "https://gitlab.com/mavisland/tedxizmit-html",
+  "homepage": "https://github.com/mavisland/tedxizmit-html",
   "main": "gulpfile.js",
   "author": {
     "name": "Tanju Yıldız",
@@ -11,34 +11,34 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "*",
-    "del": "*",
-    "es6-promise": "*",
-    "gulp": "*",
-    "gulp-archiver": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-cache": "*",
-    "gulp-clean-css": "*",
-    "gulp-concat": "*",
+    "browser-sync": "^2.20.1",
+    "del": "^3.0.0",
+    "es6-promise": "^4.2.2",
+    "gulp": "^3.9.1",
+    "gulp-archiver": "^1.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^1.0.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
     "gulp-csscomb": "*",
     "gulp-data": "^1.2.1",
-    "gulp-header": "*",
-    "gulp-imagemin": "*",
-    "gulp-less": "*",
-    "gulp-notify": "*",
+    "gulp-header": "^1.8.9",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-notify": "^3.0.0",
     "gulp-nunjucks-render": "^2.2.1",
-    "gulp-plumber": "*",
-    "gulp-rename": "*",
-    "gulp-uglify": "*",
-    "gulp-util": "*",
-    "gulp.spritesmith": "^6.5.1"
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp.spritesmith": "^6.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/mavisland/tedxizmit-html.git"
+    "url": "https://github.com/mavisland/tedxizmit-html.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/mavisland/tedxizmit-html/issues"
+    "url": "https://github.com/mavisland/tedxizmit-html/issues"
   },
   "keywords": [
     "psd to html",
@@ -49,5 +49,5 @@
     "magnific popup",
     "nunjucks",
     "gulp"
-  ]
+  ],
 }
